@@ -109,10 +109,10 @@
 	url = https://github.com/n1tr0g/golja-gnupg.git
 [submodule "client"]
 	path = client
-	url = git@github.com:ricofehr/nextdeploy-cli
+	url = git@github.com:ndnurun/nextdeploy-cli
 [submodule "puppet"]
 	path = puppet
-	url = git@github.com:ricofehr/nextdeploy-puppet
+	url = git@github.com:ndnurun/nextdeploy-puppet
 [submodule "vagrant/modules/vsftpd"]
 	path = vagrant/modules/vsftpd
 	url = https://github.com/thias/puppet-vsftpd/
@@ -127,10 +127,10 @@
 	url = https://github.com/bfraser/puppet-grafana
 [submodule "webui"]
 	path = webui
-	url = git@github.com:ricofehr/nextdeploy-webui
+	url = git@github.com:ndnurun/nextdeploy-webui
 [submodule "vagrant/modules/neutron"]
 	path = vagrant/modules/neutron
-	url = https://github.com/ricofehr/puppet-neutron
+	url = https://github.com/ndnurun/puppet-neutron
 	branch = nextdeploy
 [submodule "vagrant/modules/phantomjs"]
 	path = vagrant/modules/phantomjs

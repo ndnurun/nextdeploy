@@ -38,21 +38,21 @@ glance_image:
     is_public: 'yes'
     container_format: 'bare'
     disk_format: 'qcow2'
-    source: 'http://imgs.nextdeploy.io/os/osvm-jessie.img'
+    source: 'http://imgs.nextdeploy.services-pm.fr/os/osvm-jessie.img'
   osvm-trusty:
     ensure: present
     name: 'osvm-trusty'
     is_public: 'yes'
     container_format: 'bare'
     disk_format: 'qcow2'
-    source: 'http://imgs.nextdeploy.io/os/osvm-trusty2.img'
+    source: 'http://imgs.nextdeploy.services-pm.fr/os/osvm-trusty2.img'
   osvm-xenial:
     ensure: present
     name: 'osvm-xenial'
     is_public: 'yes'
     container_format: 'bare'
     disk_format: 'qcow2'
-    source: 'http://imgs.nextdeploy.io/os/osvm-xenial.img'
+    source: 'http://imgs.nextdeploy.services-pm.fr/os/osvm-xenial.img'
 
 #keystone setting
 keystone::enabled: false

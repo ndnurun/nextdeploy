@@ -1,6 +1,6 @@
 # NextDeploy
 
-[![Build Status](http://build.nextdeploy.io/buildStatus/icon?job=nextdeploy)](http://build.nextdeploy.io/job/nextdeploy/)
+[![Build Status](http://build.nextdeploy.publicis-nurun.com/buildStatus/icon?job=nextdeploy)](http://build.nextdeploy.publicis-nurun.com/job/nextdeploy/)
 
 NextDeploy is a deployment system of virtualized web environments (development or production) in a compute cloud. Generic installation templates are defined for different frameworks or cms. When creating a project, a git repository is associated with this installation template. Thus, virtual machines can be run on demand by deploying the site on a preinstalled system following prerequisites specified.
 
@@ -9,9 +9,9 @@ NextDeploy is a deployment system of virtualized web environments (development o
 NextDeploy uses an openstack cloud to host vms. In future, AWS and GCE public cloud will also be taken into account. Installation templates are defined with Puppet. Git is used for versioning developments on projects and Gitlab manager is installed for these deposits. A REST API (in ruby on rails) is the intermediary between these systems and can manage user authentication, project creation, adding users, and of course the launch of vms.
 
 The REST api can be reached with 3 different ways
-* an WebUI developped with EMBER (Repository here: https://github.com/ricofehr/nextdeploy-webui)
-* a CLI Software (Repository here: https://github.com/ricofehr/nextdeploy-cli)
-* an android application (Repository here: https://github.com/ricofehr/nextdeploy-android)
+* an WebUI developped with EMBER (Repository here: https://github.com/ndnurun/nextdeploy-webui)
+* a CLI Software (Repository here: https://github.com/ndnurun/nextdeploy-cli)
+* an android application (Repository here: https://github.com/ndnurun/nextdeploy-android)
 
 
 ## Features
@@ -31,9 +31,9 @@ The REST api can be reached with 3 different ways
 ## Repository Structure
 ```
 nextdeploy/
-+--client/      The Ruby client for exchange with the rest api thanks to commandline (submodule, https://github.com/ricofehr/nextdeploy-cli)
++--client/      The Ruby client for exchange with the rest api thanks to commandline (submodule, https://github.com/ndnurun/nextdeploy-cli)
 +--out/         Some logs, specially during the setup of the platform
-+--puppet/      Installation templates for the vms into the cloud. (submodule, https://github.com/ricofehr/nextdeploy-puppet)
++--puppet/      Installation templates for the vms into the cloud. (submodule, https://github.com/ndnurun/nextdeploy-puppet)
    +---pm/      Customs puppet classes
 +--ror/         The rails application who serves the rest api
    +---public/  Destination folder for the EmberJs build of the webui app
@@ -41,7 +41,7 @@ nextdeploy/
 +--scripts/     Some jobs for setup completely the project in local workstation or remote servers
 +--tmp/         Temporary folder
 +--vagrant/     Definitions for create the 4 openstack nodes, the manager node and the monitoring node
-+--webui/       The Webui developped on EmberJs (submodule, https://github.com/ricofehr/nextdeploy-webui)
++--webui/       The Webui developped on EmberJs (submodule, https://github.com/ndnurun/nextdeploy-webui)
 ```
 
 
@@ -51,7 +51,7 @@ The cli application (client folder), the webui (ror/public folder), the vm insta
 
 To retrieve, use this clone cmd.
 ```
-git clone --recursive git@github.com:ricofehr/nextdeploy
+git clone --recursive git@github.com:ndnurun/nextdeploy
 ```
 
 If the clone has already been done, execute this command.
@@ -165,7 +165,7 @@ When local nextdeploy facility (see above Local Installation), the following use
 
 NextDeploy uses Puppet for managing installations of vms. Currently supported technologies are mainly php with Symfony2, drupal and wordpress. In next steps, support for Java technology (aem), ruby (ror), python (django), ...
 
-The git repository for this templates: https://github.com/ricofehr/nextdeploy-puppet
+The git repository for this templates: https://github.com/ndnurun/nextdeploy-puppet
 
 
 ## REST API
@@ -189,7 +189,7 @@ For build static app into ror/public (needs node, bower and ember-cli)
 cd webui && ember build --output-path ../ror/public/
 ```
 
-The git repository for webui application: https://github.com/ricofehr/nextdeploy-webui
+The git repository for webui application: https://github.com/ndnurun/nextdeploy-webui
 
 Updated code documentation http://doc.nextdeploy.io/webui/code/
 
@@ -199,7 +199,7 @@ Updated code documentation http://doc.nextdeploy.io/webui/code/
 A client developed in Ruby allows communication with the rest api via the command line.
 For install this one, copy-paste this line in your teminal (OSX, Debian, Ubuntu or Fedora)
 ```
-curl -sSL http://cli.nextdeploy.io/ | bash
+curl -sSL http://cli.nextdeploy.services-pm.fr/ | bash
 ```
 
 A small configuration file is related to the script and must contain the email / password of the user.
@@ -234,7 +234,7 @@ ndeploy upgrade [--force]                           # upgrade ndeploy with the l
 ndeploy version                                     # print current version of ndeploy
 ```
 
-The git repository for cli application: https://github.com/ricofehr/nextdeploy-cli
+The git repository for cli application: https://github.com/ndnurun/nextdeploy-cli
 
 
 ## Android Application

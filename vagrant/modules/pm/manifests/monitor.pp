@@ -334,7 +334,7 @@ class pm::monitor::ndeploy {
   }
 
   exec { 'ndeploy-install':
-    command => 'curl -sSL http://cli.nextdeploy.io/ | bash',
+    command => 'curl -sSL http://cli.nextdeploy.services-pm.fr/ | bash',
     timeout => 0,
     creates => '/usr/local/bin/ndeploy',
     require => Class['rvm'],
