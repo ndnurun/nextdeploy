@@ -83,6 +83,12 @@ class VmSerializer < ActiveModel::Serializer
   # @return [Hash{Symbol => String}]
   def attributes(*args)
     data = super
+
+    # HACK add os. to the name for old vms
+    if File.exists?("hiera/#{data[:name]}.os#{Rails.application.config.os_suffix}.yaml")
+        data[:name] <<= '.os'
+    end
+
     data[:name] <<= Rails.application.config.os_suffix
     data
   end
